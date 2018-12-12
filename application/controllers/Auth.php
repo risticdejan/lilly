@@ -36,14 +36,14 @@ class Auth extends CI_Controller
                     $this->output->set_content_type('application_json');
                     $this->output->set_output(json_encode(array(
                         'status' => 'success',
-                        'message' => 'Usešno ste se ulogovali',
+                        'message' => 'Uspešno ste se ulogovali',
                         'url' => site_url('admin')
                     )));
                 }
                 else
                 {
                     $this->session->set_flashdata(array(
-                        'message' =>  'Usešno ste se ulogovali',
+                        'message' =>  'Uspešno ste se ulogovali',
                         'message_class' => 'info'
                     ));
                     redirect(site_url('admin'));
@@ -113,7 +113,7 @@ class Auth extends CI_Controller
             {
 
                 $this->session->set_flashdata(array(
-                    'message' =>  'Usešno ste se registrovali',
+                    'message' =>  'Uspešno ste se registrovali',
                     'message_class' => 'info'
                 ));
                 redirect(site_url('home'));
